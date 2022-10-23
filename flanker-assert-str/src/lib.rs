@@ -13,7 +13,7 @@ use core::str::FromStr;
 ///
 /// # Panics
 /// If the assertion fails.
-pub fn assert_str_loopback<T>(value: &T)
+pub fn assert_loopback<T>(value: &T)
     where
         T::Err: Debug,
         T: Debug + FromStr + ToString + PartialEq,

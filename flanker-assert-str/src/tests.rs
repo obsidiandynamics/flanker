@@ -1,18 +1,18 @@
 use alloc::string::{String, ToString};
 use core::num::ParseFloatError;
 use core::str::FromStr;
-use crate::assert_str_loopback;
+use crate::assert_loopback;
 
 #[test]
-fn test_assert_str_loopback() {
-    assert_str_loopback(&0.5);
+fn assert_loopback_passes() {
+    assert_loopback(&0.5);
 }
 
 #[test]
 #[should_panic(expected = "assertion failed: `(left == right)`
   left: `Faulty(0.8)`,
  right: `Faulty(0.9)`")]
-fn test_assert_str_loopback_panics() {
+fn assert_loopback_panics() {
     #[derive(Debug, PartialEq)]
     struct Faulty(f64);
 
@@ -32,5 +32,5 @@ fn test_assert_str_loopback_panics() {
 
     assert_eq!("0.6", Faulty(0.5).to_string());
     assert_eq!(Faulty(0.5), Faulty::from_str("0.5").unwrap());
-    assert_str_loopback(&Faulty(0.8));
+    assert_loopback(&Faulty(0.8));
 }
