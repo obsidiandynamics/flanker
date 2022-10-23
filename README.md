@@ -2,5 +2,9 @@
 ===
 Flanker is home to tiny **µ-libraries** that do very specific things, and can be imported into a project individually, without dragging in tons of unneeded dependencies. Most Flanker libraries are `no_std`.
 
+[![Build Status](https://img.shields.io/github/workflow/status/obsidiandynamics/flanker/Cargo%20build?style=flat-square&logo=github)](https://github.com/obsidiandynamics/flanker/actions/workflows/master.yml)
+[![codecov](https://img.shields.io/codecov/c/github/obsidiandynamics/flanker/master?style=flat-square&logo=codecov)](https://codecov.io/gh/obsidiandynamics/flanker)
+![no_std](https://img.shields.io/badge/linking-no__std-9cf?style=flat-square)
+
 # Libraries
-* [`flanker-temp`](https://github.com/obsidiandynamics/flanker/flanker-temp) — Helper for working with temporary files.
+* [`flanker-temp`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-temp) — Helper for working with temporary files.
