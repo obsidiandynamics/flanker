@@ -37,9 +37,13 @@ function await() {
   done
 }
 
+function publish() {
+  package=$1
+  cargo publish -p $package
+  cargo await $package
+}
+
 echo "Publishing all packages for $project ${new_version}"
 
-cargo publish -p flanker
-await flanker
-cargo publish -p flanker-temp
-await flanker-temp
+publish flanker
+publish flanker-temp
