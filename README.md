@@ -7,5 +7,5 @@ Flanker is home to tiny **µ-libraries** that do very specific things, and can b
 ![no_std](https://img.shields.io/badge/linking-no__std-9cf?style=flat-square)
 
 # Libraries
-* [`flanker-temp`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-assert-float) — Assertions for floating-point numbers.
+* [`flanker-assert-float`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-assert-float) — Assertions for floating-point numbers.
 * [`flanker-temp`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-temp) — Helper for working with temporary files.
