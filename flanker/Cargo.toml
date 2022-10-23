@@ -1,0 +1,12 @@
+[package]
+name = "flanker"
+version = "0.1.0"
+edition = "2021"
+readme = "../README.md"
+authors = ["Emil Koutanov"]
+license = "MIT"
+description = "µ-libraries for Rust."
+repository = "https://github.com/obsidiandynamics/flanker"
+keywords = ["no_std"]
+
+[dependencies]
