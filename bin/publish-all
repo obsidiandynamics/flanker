@@ -40,7 +40,7 @@ function await() {
 function publish() {
   package=$1
   cargo publish -p $package
-  cargo await $package
+  await $package
 }
 
 echo "Publishing all packages for $project ${new_version}"

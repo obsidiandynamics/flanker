@@ -1,0 +1,12 @@
+[package]
+name = "flanker-assert-float"
+version = "0.1.0"
+edition = "2021"
+readme = "../README.md"
+authors = ["Emil Koutanov"]
+license = "MIT"
+description = "Assertions for floating-point numbers."
+repository = "https://github.com/obsidiandynamics/flanker/flanker-assert-float"
+keywords = ["float", "assert", "test", "no_std"]
+
+[dependencies]

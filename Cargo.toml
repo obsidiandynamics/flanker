@@ -1,5 +1,6 @@
 [workspace]
 members = [
     "flanker",
+    "flanker-assert-float",
     "flanker-temp",
 ]
