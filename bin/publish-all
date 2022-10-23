@@ -46,4 +46,5 @@ function publish() {
 echo "Publishing all packages for $project ${new_version}"
 
 publish flanker
+publish flanker-assert-float
 publish flanker-temp

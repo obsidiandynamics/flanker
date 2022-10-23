@@ -1,8 +1,8 @@
 [package]
 name = "flanker-assert-float"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
-readme = "../README.md"
+readme = "README.md"
 authors = ["Emil Koutanov"]
 license = "MIT"
 description = "Assertions for floating-point numbers."

@@ -1,8 +1,8 @@
 [package]
 name = "flanker-temp"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
-readme = "../README.md"
+readme = "README.md"
 authors = ["Emil Koutanov"]
 license = "MIT"
 description = "Helper for working with temporary files."
