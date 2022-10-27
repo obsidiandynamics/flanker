@@ -1,6 +1,7 @@
 //! Helper for working with temporary files.
 
-use std::fs;
+use std::{fs, process};
+use std::fmt::Debug;
 use std::path::{Path, PathBuf};
 use tinyrand::Rand;
 use tinyrand_std::thread_rand;
@@ -17,8 +18,10 @@ impl TempPath {
     pub fn with_extension(extension: &str) -> Self {
         let path_buf = std::env::temp_dir();
         let mut rand = thread_rand();
+        let pid = process::id();
+        let tid = thread_id::get();
         let random = rand.next_u64();
-        let path_buf = path_buf.join(format!("test-{random:X}.{extension}"));
+        let path_buf = path_buf.join(format!("test-{pid}-{tid}-{random:X}.{extension}"));
         Self { path_buf }
     }
 }
