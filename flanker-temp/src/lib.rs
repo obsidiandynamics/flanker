@@ -15,6 +15,7 @@ pub struct TempPath {
 
 impl TempPath {
     /// Returns a random path in the system's temp directory.
+    #[allow(clippy::similar_names)]
     pub fn with_extension(extension: &str) -> Self {
         let path_buf = std::env::temp_dir();
         let mut rand = thread_rand();
@@ -34,7 +35,14 @@ impl AsRef<Path> for TempPath {
 
 impl Drop for TempPath {
     fn drop(&mut self) {
-        let _ignore = fs::remove_file(self);
+        let meta = fs::metadata(&self);
+        if let Ok(meta) = meta {
+            let _ignore = if meta.is_dir() {
+                fs::remove_dir(self)
+            } else {
+                fs::remove_file(self)
+            };
+        }
     }
 }
 

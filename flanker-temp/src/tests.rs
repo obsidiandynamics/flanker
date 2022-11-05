@@ -15,7 +15,7 @@ fn lifecycle_uninitialised() {
 }
 
 #[test]
-fn lifecycle_initialised() {
+fn lifecycle_initialised_file() {
     let temp = TempPath::with_extension("tmp");
     // temp file is lazily created
     assert!(!temp.as_ref().exists());
@@ -25,6 +25,22 @@ fn lifecycle_initialised() {
     assert!(temp.as_ref().exists());
 
     // dropping a TempPath deletes the underlying file
+    let path = PathBuf::from(temp.as_ref());
+    drop(temp);
+    assert!(!path.exists());
+}
+
+#[test]
+fn lifecycle_initialised_dir() {
+    let temp = TempPath::with_extension("tmp");
+    // temp file is lazily created
+    assert!(!temp.as_ref().exists());
+
+    // need to write to it for it be created
+    fs::create_dir(temp.as_ref()).unwrap();
+    assert!(temp.as_ref().exists());
+
+    // dropping a TempPath deletes the underlying directory
     let path = PathBuf::from(temp.as_ref());
     drop(temp);
     assert!(!path.exists());
