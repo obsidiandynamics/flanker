@@ -9,12 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
+      - uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable
+          toolchain: 1.66.0
       - run: cargo test -- --include-ignored
       - run: cargo test --examples
       - run: RUSTDOCFLAGS="-D warnings" cargo doc --no-deps
+      - run: rustup component add clippy
       - run: bin/clippy-pedantic.sh
       - run: cargo bench --no-run --profile dev
       - run: cargo clean
