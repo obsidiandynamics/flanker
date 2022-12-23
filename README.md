@@ -9,4 +9,5 @@ Flanker is home to tiny **µ-libraries** that do very specific things, and can b
 # Libraries
 * [`flanker-assert-float`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-assert-float) — Assertions for floating-point numbers.
 * [`flanker-assert-str`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-assert-str) — Assertions for strings.
+* [`flanker-lazy`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-lazy) — Lazy value initialisation.
 * [`flanker-temp`](https://github.com/obsidiandynamics/flanker/tree/master/flanker-temp) — Helper for working with temporary files.

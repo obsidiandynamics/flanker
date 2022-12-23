@@ -1,0 +1,12 @@
+[package]
+name = "flanker-lazy"
+version = "0.5.0"
+edition = "2021"
+readme = "README.md"
+authors = ["Emil Koutanov"]
+license = "MIT"
+description = "Lazy value initialisation."
+repository = "https://github.com/obsidiandynamics/flanker/flanker-lazy"
+keywords = ["lazy", "memoize", "cache", "no_std"]
+
+[dependencies]

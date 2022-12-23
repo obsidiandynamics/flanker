@@ -3,5 +3,6 @@ members = [
     "flanker",
     "flanker-assert-str",
     "flanker-assert-float",
+    "flanker-lazy",
     "flanker-temp",
 ]
